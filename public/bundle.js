@@ -25804,23 +25804,22 @@
 	var React = __webpack_require__(8);
 	var Nav = __webpack_require__(230);
 
-	var Main = React.createClass({
-	  displayName: 'Main',
-
-	  render: function render() {
-	    return React.createElement(
+	var Main = function Main(props) {
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(Nav, null),
+	    React.createElement(
 	      'div',
-	      null,
-	      React.createElement(Nav, null),
+	      { className: 'row' },
 	      React.createElement(
-	        'h2',
-	        null,
-	        'Main Component'
-	      ),
-	      this.props.children
-	    );
-	  }
-	});
+	        'div',
+	        { className: 'columns medium-6 large-4 small-centered' },
+	        undefined.props.children
+	      )
+	    )
+	  );
+	};
 
 	module.exports = Main;
 
@@ -25953,7 +25952,7 @@
 	      React.createElement(
 	        'h3',
 	        null,
-	        'Weather Component'
+	        'Get Weather'
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	      React.createElement(WeatherMessage, { temp: temp, location: location })
@@ -26039,26 +26038,26 @@
 /* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var About = React.createClass({
-	  displayName: 'About',
+	  displayName: "About",
 
 	  render: function render() {
 	    return React.createElement(
-	      'div',
+	      "div",
 	      null,
 	      React.createElement(
-	        'h3',
-	        null,
-	        'About'
+	        "h1",
+	        { className: "text-center page-title" },
+	        "About"
 	      ),
 	      React.createElement(
-	        'p',
+	        "p",
 	        null,
-	        'Welcome to the About Page!'
+	        "Welcome to the About Page!"
 	      )
 	    );
 	  }
